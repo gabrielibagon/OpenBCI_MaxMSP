@@ -75,7 +75,7 @@ class OpenBCIBoard(object):
     if not port:
       port = self.find_port()
     self.port = port
-    print("Connecting to V3 at port %s" %(port))
+    print("Connecting to OpenBCI at port %s" %(port))
     self.ser = serial.Serial(port= port, baudrate = baud, timeout=timeout)
 
     print("Serial established...")
@@ -87,7 +87,7 @@ class OpenBCIBoard(object):
 
     #wait for device to be ready
     time.sleep(1)
-    self.print_incoming_text()
+    # self.print_incoming_text()
 
     self.streaming = False
     self.filtering_data = filter_data
@@ -549,13 +549,11 @@ class OpenBCIBoard(object):
     else:
       raise EnvironmentError('Error finding ports on your operating system')
     openbci_port = ''
-    print(ports)
     for port in ports:
       try:
         s = serial.Serial(port= port, baudrate = self.baudrate, timeout=self.timeout)
         s.write(b'v')
         openbci_serial = self.openbci_id(s)
-        print(openbci_serial)
         s.close()
         if openbci_serial:
           openbci_port = port;

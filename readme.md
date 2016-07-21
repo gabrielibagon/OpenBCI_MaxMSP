@@ -22,4 +22,38 @@ This repository contains the files you will need to run in order to start stream
 
 # Usage
 ## Start Streaming
-## Receive in Max
+  1. Go to your command line/terminal, and navigate to the "OpenBCI_MaxMSP" folder.
+
+  2. Type:
+
+  		`python stream_osc.py`
+
+  	You should then receive some output (such as the OpenBCI Board identification). You will then be presented with a `-->`, like this:
+
+  	[!osc_terminal](/Pictures/osc_terminal.jpg)
+
+  	
+  3. Press "/start" to begin streaming from the board. Remember to have your board turned on and dongle plugged in first!
+
+## Receive the Stream in Max
+
+	Here is a basic Max file for receiving the raw values sent out from the OpenBCI board. The most important component in the [udpreceive 12345] object ("12345" is the port number that OpenBCI uses to send information over OSC):
+
+
+	Once you have this together, you are ready to start manipulating biodata in Max! I'll show you a few more notes of where to go from here:
+
+### Unpack the data: 
+
+	Use the [unpack] object to separate the various values in your data stream (e.g. the 8 electrodes).
+
+### Filter the data
+
+### Statistical Analysis in Python
+
+### Statistical Analysis in Max
+
+### Generate sound with the data
+
+
+	Use your creativity to find ways to manipulate and explore this data, and feel free to reach out to me if you've thought of something interesting.
+

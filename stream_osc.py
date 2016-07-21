@@ -45,20 +45,15 @@ class StreamerOSC():
 
     def begin(self):
         print ("--------------INFO---------------")
-        print ("User serial interface enabled...\n" + \
-            "View command map at http://docs.openbci.com.\n" + \
-            "Type /start to run -- and /stop before issuing new commands afterwards.\n" + \
-            "Type /exit to exit. \n" + \
-            "Board outputs are automatically printed as: \n" +  \
-            "%  <tab>  message\n" + \
-            "$$$ signals end of message")
-
+        print ("Commands:\n"+
+            "/start to begin\n" +
+            "/stop to stop streaming.\n" + \
+            "/exit to end the program")
         print("\n-------------BEGIN---------------")
         # Init board state
         # s: stop board streaming; v: soft reset of the 32-bit board (no effect with 8bit board)
         s = 'sv'
         # Tell the board to enable or not daisy module
-        print(self.board.daisy)
         if self.board.daisy:
             s = s + 'C'
         else:
