@@ -30,7 +30,7 @@ This repository contains the files you will need to run in order to start stream
 
   You should then receive some output (such as the OpenBCI Board identification). You will then be presented with a `-->`, like this:
 
-  [!osc_terminal](./Pictures/osc_terminal.jpg)
+  *![osc_terminal](./Pictures/osc_terminal.jpg)
 
   	
 3. Press "/start" to begin streaming from the board. Remember to have your board turned on and dongle plugged in first!
@@ -39,7 +39,7 @@ This repository contains the files you will need to run in order to start stream
 
 Here is a basic Max setup for receiving the raw values sent out from the OpenBCI board. The most important component in the [udpreceive 12345] object ("12345" is the port number that OpenBCI uses to send information over OSC):
 
-[!max_receive](./Pictures/max_receive.gif)
+  *![max_receive](./Pictures/max_receive.gif)
 
 Once you have this together, you are ready to start manipulating biodata in Max! The rest of the tutorial explains a few basic ways to handle this data. This should be straightforward for experienced Max users, but useful for those new to the platform.
 
@@ -47,11 +47,11 @@ Once you have this together, you are ready to start manipulating biodata in Max!
 
 Use the [unpack] object to separate the various values in your data stream (e.g. the 8 electrodes). Here is an example that unpacks and prints the 8 channels individually.
 
-[!unpack](./Pictures/unpack.jpg)
+  *![unpack](./Pictures/unpack.jpg)
 
 ### Filter the data
 
-MaxMSP has great digital signal processing capabilities, and filtering is a significant part of working with EEG/EMG/ECG data. Many researchers use filters to preprocess neural data to remove significant sources of noise in the signal. However, the type of filters you use (or even the choice to use filters at all) will depend on your situation and goals. For an in-depth explanation of filtering EEG data, read [Digital filter design for electrophysiological data – a practical  approach](http://www.ncbi.nlm.nih.gov/pubmed/25128257)
+MaxMSP has great digital signal processing capabilities, and filtering is a significant part of working with EEG/EMG/ECG data. Many researchers use filters to preprocess neural data to remove significant sources of noise in the signal. However, the type of filters you use (or even the choice to use filters at all) will depend on your situation and goals. For an in-depth explanation of filtering EEG data, read [Digital filter design for electrophysiological data â€“ a practical  approach](http://www.ncbi.nlm.nih.gov/pubmed/25128257)
 
 For this tutorial, we'll focus on three basic noise-reducing filters: a **notch filter**, **highpass filter**, and **lowpass filter**
 
