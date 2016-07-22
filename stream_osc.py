@@ -1,5 +1,3 @@
-
-# requires pyosc
 from OSC import OSCClient, OSCMessage
 import argparse
 import os
@@ -11,19 +9,9 @@ import sys
 import open_bci_v3 as bci
 
 
-# Use OSC protocol to broadcast data (UDP layer), using "/openbci" stream. (NB. does not check numbers of channel as TCP server)
+# Use OSC protocol to broadcast data (UDP layer), using "/openbci" stream.
 
-class StreamerOSC():
-    """
-
-    Relay OpenBCI values to OSC clients
-
-    Args:
-      port: Port of the server
-      ip: IP address of the server
-      address: name of the stream
-    """
-        
+class StreamerOSC():       
     def __init__(self, ip='localhost', port=12345, address="/openbci"):
         # connection infos
         self.ip = ip
@@ -37,7 +25,6 @@ class StreamerOSC():
     def send(self, sample):
         mes = OSCMessage(self.address)
         mes.append(sample.channel_data)
-        # silently pass if connection drops
         try:
             self.client.send(mes)
         except:

@@ -47,15 +47,16 @@ Once you have this together, you are ready to start manipulating biodata in Max!
 
 Use the [unpack] object to separate the various values in your data stream (e.g. the 8 electrodes). Here is an example that unpacks and prints the 8 channels individually.
 
-[Picture]
+[!unpack](./Pictures/unpack.jpg)
 
 ### Filter the data
 
-MaxMSP has great digital signal processing capabilities, and filtering is a significant part of working with EEG/EMG/ECG data. Many researchers use filters to preprocess neural data to remove significant sources of noise in the signal. However, the type of filters you use (or even the choice to use filters at all) will depend on your situation and goals. For an in-depth explanation of filtering EEG data, read (Digital filter design for electrophysiological data â€“ a practical  approach)[http://www.ncbi.nlm.nih.gov/pubmed/25128257]
+MaxMSP has great digital signal processing capabilities, and filtering is a significant part of working with EEG/EMG/ECG data. Many researchers use filters to preprocess neural data to remove significant sources of noise in the signal. However, the type of filters you use (or even the choice to use filters at all) will depend on your situation and goals. For an in-depth explanation of filtering EEG data, read [Digital filter design for electrophysiological data – a practical  approach](http://www.ncbi.nlm.nih.gov/pubmed/25128257)
 
-For this tutorial, we'll focus on two basic noise-reducing filters: a *notch filter* and a *bandpass filter*.
+For this tutorial, we'll focus on three basic noise-reducing filters: a **notch filter**, **highpass filter**, and **lowpass filter**
 
 The notch filter is used to reduce the 60Hz spike introduced into the signal by electrical line noise.
+
 TODO
 
 ### Statistical Analysis in Python
