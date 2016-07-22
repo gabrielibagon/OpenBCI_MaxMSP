@@ -1,10 +1,13 @@
+Using OpenBCI in Max/MSP
+==========================
+
 This repository contains an in implementation to get OpenBCI biodata into MaxMSP using OSC.
 
-OpenBCI is a company that produces open-source equipment for recording biosignals such as EEG (brain activity), EMG (muscle activity), and ECG (heart activity). This data is streamed into your computer via a USB Serial port, where you can then access the raw data for analysis, visualization, etc.
+[OpenBCI](openbci.com) is a company that produces open-source equipment for recording biosignals such as EEG (brain activity), EMG (muscle activity), and ECG (heart activity). This data is streamed into your computer via a USB Serial port, where you can then access the raw data for analysis, visualization, etc.
 
 This guide shows you a way to stream OpenBCI data into Max MSP in order to explore creative ways to work with brain signals. To run this tutorial, you will need:
 
-1. Python 2.7 
+1. Python 2.7 (Python 3+ support under development!)
 2. Max MSP
 
 # Setup
