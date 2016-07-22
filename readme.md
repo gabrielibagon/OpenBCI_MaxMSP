@@ -27,7 +27,7 @@ This repository contains the files you will need to run in order to start stream
 ## Start Streaming
 1. Go to your command line/terminal, and navigate to the "OpenBCI_MaxMSP" folder.
 
-2. Type:
+2. Plug in your dongle and power on your board, then type:
 
   `python stream_osc.py`
 
@@ -36,7 +36,7 @@ This repository contains the files you will need to run in order to start stream
   *![osc_terminal](./Pictures/osc_terminal.jpg)
 
   	
-3. Press "/start" to begin streaming from the board. Remember to have your board turned on and dongle plugged in first!
+3. Press "/start" to begin streaming from the board.
 
 ## Receive the Stream in Max
 
